@@ -1,0 +1,120 @@
+
+==============================================
+START : FUNC_BUILD_KERNEL
+==============================================
+
+build common config=exynos7870-j7xelte_eur_open_defconfig 
+build model config=j7xelte 
+rm files in : /home/geiti94/android/kernel/A72016/arch/arm64/boot/dts/*.dtb
+rm: cannot remove '/home/geiti94/android/kernel/A72016/arch/arm64/boot/boot.img-dtb': No such file or directory
+rm: cannot remove '/home/geiti94/android/kernel/A72016/arch/arm64/boot/boot.img-zImage': No such file or directory
+Kconfig:15:warning: environment variable ANDROID_MAJOR_VERSION undefined
+drivers/media/mtv/sms3230/Kconfig:51:warning: ignoring type redefinition of 'SMS_USB_DRV' from 'tristate' to 'boolean'
+drivers/media/mtv/sms3230/Kconfig:58:warning: ignoring type redefinition of 'SMS_SDIO_DRV' from 'tristate' to 'boolean'
+#
+# configuration written to .config
+#
+scripts/kconfig/conf --silentoldconfig Kconfig
+Kconfig:15:warning: environment variable ANDROID_MAJOR_VERSION undefined
+drivers/media/mtv/sms3230/Kconfig:51:warning: ignoring type redefinition of 'SMS_USB_DRV' from 'tristate' to 'boolean'
+drivers/media/mtv/sms3230/Kconfig:58:warning: ignoring type redefinition of 'SMS_SDIO_DRV' from 'tristate' to 'boolean'
+INFO: CC is /home/geiti94/android/toolchain/aarch64-linux-android-4.9/bin/aarch64-linux-android-gcc
+  CHK     include/config/kernel.release
+  UPD     include/config/kernel.release
+  CHK     include/generated/uapi/linux/version.h
+  CHK     include/generated/utsrelease.h
+  UPD     include/generated/utsrelease.h
+  DTC     arch/arm64/boot/dts/exynos7870-smdk7870.dtb
+  DTC     arch/arm64/boot/dts/exynos7870-universal7870.dtb
+  DTC     arch/arm64/boot/dts/exynos7870-universal7870_rev01.dtb
+  CALL    scripts/checksyscalls.sh
+  CHK     include/generated/compile.h
+  CC      init/version.o
+  CC      kernel/sys.o
+  LD      init/built-in.o
+  CC      drivers/base/firmware_class.o
+  LD      drivers/base/built-in.o
+  CC      kernel/trace/trace.o
+  LD      kernel/trace/built-in.o
+  LD      kernel/built-in.o
+drivers/net/wireless/bcmdhd_1_77/Makefile:290: Not found Android version file. Set None
+  LD      drivers/built-in.o
+  LINK    vmlinux
+  LD      vmlinux.o
+  MODPOST vmlinux.o
+  GEN     .version
+  CHK     include/generated/compile.h
+  UPD     include/generated/compile.h
+  CC      init/version.o
+  LD      init/built-in.o
+  KSYM    .tmp_kallsyms1.o
+  KSYM    .tmp_kallsyms2.o
+  LD      vmlinux
+  SORTEX  vmlinux
+  SYSMAP  System.map
+  OBJCOPY arch/arm64/boot/Image
+  GZIP    arch/arm64/boot/Image.gz
+Processing dts files...
+=> Processing: exynos7870-j7xelte_eur_open_00.dts
+=> Generating: exynos7870-j7xelte_eur_open_00.dtb
+=> Processing: exynos7870-j7xelte_eur_open_01.dts
+=> Generating: exynos7870-j7xelte_eur_open_01.dtb
+=> Processing: exynos7870-j7xelte_eur_open_02.dts
+=> Generating: exynos7870-j7xelte_eur_open_02.dtb
+=> Processing: exynos7870-j7xelte_eur_open_03.dts
+=> Generating: exynos7870-j7xelte_eur_open_03.dtb
+=> Processing: exynos7870-j7xelte_eur_open_04.dts
+=> Generating: exynos7870-j7xelte_eur_open_04.dtb
+Generating dtb.img...
+=> Found compatible entry: samsung, J7XE EUR OPEN 00
+    (chip: 7870, hw_rev: 0, hw_rev_end: 0)
+=> Found compatible entry: samsung, J7XE LTE EUR OPEN 01
+    (chip: 7870, hw_rev: 1, hw_rev_end: 1)
+=> Found compatible entry: samsung, J7XE LTE EUR OPEN 02
+    (chip: 7870, hw_rev: 2, hw_rev_end: 2)
+=> Found compatible entry: samsung, J7XE LTE EUR OPEN 03
+    (chip: 7870, hw_rev: 3, hw_rev_end: 3)
+=> Found compatible entry: samsung, J7XE LTE EUR OPEN 04
+    (chip: 7870, hw_rev: 4, hw_rev_end: 255)
+Done.
+
+=================================
+END   : FUNC_BUILD_KERNEL
+=================================
+
+[3J[H[2J 
+Android Image Kitchen - RepackImg Script
+by osm0sis @ xda-developers
+ 
+Warning: Overwriting existing files!
+ 
+Packing ramdisk...
+ 
+Using compression: gzip
+ 
+Getting build information...
+kernel = boot.img-zImage
+cmdline = 
+board = SRPQD19B000KU
+base = 10000000
+pagesize = 2048
+kernel_offset = 00008000
+ramdisk_offset = 01000000
+second_offset = 00f00000
+tags_offset = 00000100
+os_version = 7.0.0
+os_patch_level = 2017-07
+hash = sha1
+dtb = boot.img-dtb
+ 
+Building image...
+ 
+Using format: AOSP
+ 
+Appending footer...
+ 
+Using type: SEAndroid
+ 
+Done!
+rm: cannot remove 'j7xelte-eur.img': No such file or directory
+Total compile time was 15 seconds
