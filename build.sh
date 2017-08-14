@@ -18,10 +18,10 @@ PAGE_SIZE=2048
 DTB_PADDING=0
 
 case $MODEL in
-dreamlte)
+on7xelte)
 	case $VARIANT in
 	can|duos|eur|xx)
-		KERNEL_DEFCONFIG=exynos8895-dreamlte_eur_open_defconfig
+		KERNEL_DEFCONFIG=on7xelteswa_00_defconfig
 		;;
 	*)
 		echo "Unknown variant: $VARIANT"
@@ -67,14 +67,11 @@ FUNC_BUILD_DTIMAGE_TARGET()
 	}
 
 	case $MODEL in
-	dreamlte)
+	on7xelte)
 		case $VARIANT in
 		can|duos|eur|xx)
-			DTSFILES="exynos8895-dreamlte_eur_open_00 exynos8895-dreamlte_eur_open_01
-					exynos8895-dreamlte_eur_open_02 exynos8895-dreamlte_eur_open_03
-					exynos8895-dreamlte_eur_open_04 exynos8895-dreamlte_eur_open_05
-					exynos8895-dreamlte_eur_open_07 exynos8895-dreamlte_eur_open_08
-					exynos8895-dreamlte_eur_open_09 exynos8895-dreamlte_eur_open_10"
+			DTSFILES="exynos7870-on7xelte_swa_open_00 exynos7870-on7xelte_swa_open_01
+					exynos7870-on7xelte_swa_open_02"
 			;;
 		*)
 			echo "Unknown variant: $VARIANT"
@@ -158,14 +155,14 @@ FUNC_BUILD_RAMDISK()
 	mv $RDIR/arch/$ARCH/boot/dtb.img $RDIR/arch/$ARCH/boot/boot.img-dtb
 
 	case $MODEL in
-	dreamlte)
+	on7xelte)
 		case $VARIANT in
 		can|duos|eur|xx)
-			rm -f $RDIR/ramdisk/SM-G950F/split_img/boot.img-zImage
-			rm -f $RDIR/ramdisk/SM-G950F/split_img/boot.img-dtb
-			mv -f $RDIR/arch/$ARCH/boot/boot.img-zImage $RDIR/ramdisk/SM-G950F/split_img/boot.img-zImage
-			mv -f $RDIR/arch/$ARCH/boot/boot.img-dtb $RDIR/ramdisk/SM-G950F/split_img/boot.img-dtb
-			cd $RDIR/ramdisk/SM-G950F
+			rm -f $RDIR/ramdisk/SM-G610F/split_img/boot.img-zImage
+			rm -f $RDIR/ramdisk/SM-G610F/split_img/boot.img-dtb
+			mv -f $RDIR/arch/$ARCH/boot/boot.img-zImage $RDIR/ramdisk/SM-G610F/split_img/boot.img-zImage
+			mv -f $RDIR/arch/$ARCH/boot/boot.img-dtb $RDIR/ramdisk/SM-G610F/split_img/boot.img-dtb
+			cd $RDIR/ramdisk/SM-G610F
 			./repackimg.sh
 			echo SEANDROIDENFORCE >> image-new.img
 			;;
@@ -204,10 +201,10 @@ FUNC_BUILD_ZIP()
 	cd $RDIR/build
 	rm $MODEL-$VARIANT.img
 	case $MODEL in
-	dreamlte)
+	on7xelte)
 		case $VARIANT in
 		can|duos|eur|xx)
-			mv -f $RDIR/ramdisk/SM-G950F/image-new.img $RDIR/build/$MODEL-$VARIANT.img
+			mv -f $RDIR/ramdisk/SM-G610F/image-new.img $RDIR/build/$MODEL-$VARIANT.img
 			;;
 		*)
 			echo "Unknown variant: $VARIANT"
