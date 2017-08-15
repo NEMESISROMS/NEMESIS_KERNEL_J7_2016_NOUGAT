@@ -35,7 +35,6 @@ ro.config.dmverity=false
 ro.config.rkp=false
 ro.config.kap=false
 ro.sec.fle.encryption=false
-ro.securestorage.support=false
 ro.security.vaultkeeper.feature=false
 #
 # BOOTIMAGE_BUILD_PROPERTIES

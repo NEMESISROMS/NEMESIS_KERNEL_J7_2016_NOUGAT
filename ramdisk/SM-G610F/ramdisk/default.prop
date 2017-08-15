@@ -1,0 +1,45 @@
+#
+# ADDITIONAL_DEFAULT_PROPERTIES
+#
+telephony.lteOnCdmaDevice=0
+persist.security.ams.enforcing=3
+ro.oem_unlock_supported=1
+ro.secure=0
+security.perf_harden=false
+ro.adb.secure=0
+ro.allow.mock.location=0
+ro.debuggable=1
+persist.sys.usb.config=mtp,adb
+ro.zygote=zygote32
+pm.dexopt.first-boot=interpret-only
+pm.dexopt.boot=verify-profile
+pm.dexopt.install=interpret-only
+pm.dexopt.bg-dexopt=speed-profile
+pm.dexopt.ab-ota=speed-profile
+pm.dexopt.nsys-library=speed
+pm.dexopt.shared-apk=speed
+pm.dexopt.forced-dexopt=speed
+pm.dexopt.core-app=speed
+dalvik.vm.image-dex2oat-Xms=64m
+dalvik.vm.image-dex2oat-Xmx=64m
+dalvik.vm.dex2oat-Xms=64m
+dalvik.vm.dex2oat-Xmx=512m
+ro.dalvik.vm.native.bridge=0
+dalvik.vm.usejit=true
+dalvik.vm.usejitprofiles=true
+dalvik.vm.appimageformat=lz4
+debug.atrace.tags.enableflags=0
+
+ro.config.tima=0
+ro.config.dmverity=false
+ro.config.rkp=false
+ro.config.kap=false
+ro.sec.fle.encryption=false
+ro.securestorage.support=false
+ro.security.vaultkeeper.feature=false
+#
+# BOOTIMAGE_BUILD_PROPERTIES
+#
+ro.bootimage.build.date=Wed Jun 28 08:05:07 KST 2017
+ro.bootimage.build.date.utc=1498604707
+ro.bootimage.build.fingerprint=samsung/j7veltedx/j7velte:7.0/NRD90M/J701FXXU1AQF8:user/test-keys
